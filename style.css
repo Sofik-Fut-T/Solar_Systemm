@@ -1,0 +1,70 @@
+/* Базова конфігурація середовища */
+body {
+    background-color: #000000;
+    background-image: radial-gradient(circle at 50% 40%, #0a0f1a 0%, #000000 100%);
+    background-attachment: fixed;
+    font-family: 'Rajdhani', sans-serif;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+
+/* Типографіка */
+.font-sci-fi { 
+    font-family: 'Orbitron', sans-serif; 
+}
+
+/* Візуальні ефекти*/
+.neon-border {
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+}
+.neon-border:hover, .neon-border.active {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+    border-color: #22d3ee;
+}
+
+/* Анімація меню */
+#mobile-menu { 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+/* Конфігурація 3D-простору */
+#scene-container { 
+    perspective: 1000px; 
+    touch-action: pan-y;
+}
+.preserve-3d { 
+    transform-style: preserve-3d; 
+}
+#universe, .planet-container, .planet-billboard {
+    transform-style: preserve-3d;
+}
+
+/* Топологія об'єктів сцени */
+.planet-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.planet-billboard {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform-style: preserve-3d;
+}
+.planet-body {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+/* Динаміка взаємодії (Hover) */
+.planet-container:hover .planet-body {
+    transform: translate(-50%, -50%) scale(1.4);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.8) !important;
+    z-index: 100;
+}
