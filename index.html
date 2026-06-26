@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="min-h-screen flex flex-col relative overflow-x-hidden">
+
+    <nav class="bg-black/80 backdrop-blur-xl border-b border-cyan-900/50 fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full border-2 border-cyan-400 shadow-[0_0_15px_#22d3ee]"></div>
+                    <span class="font-sci-fi font-bold text-xl tracking-[0.2em] text-cyan-400">SOLAR_OS</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8 font-sci-fi text-sm tracking-widest">
+                    <a href="#scene-container" class="text-gray-400 hover:text-cyan-300 transition duration-300">СИСТЕМА</a>
+                    <a href="#game-view" class="text-gray-400 hover:text-cyan-300 transition duration-300">ГРА</a>
+                    <a href="#catalog-view" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">НЕБЕСНІ ТІЛА</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-2">
+                    <input type="text" id="username-input" placeholder="ВВЕДІТЬ ІМ'Я..." class="bg-gray-900/50 border border-cyan-900 text-cyan-400 text-xs font-sci-fi px-3 py-1 rounded focus:outline-none focus:border-cyan-400 transition w-40">
+                    <button id="greet-btn" class="font-sci-fi text-xs text-black bg-cyan-500 px-3 py-1 rounded hover:bg-cyan-400 transition">ВХІД</button>
+                    <span id="greeting-message" class="hidden font-sci-fi text-xs text-cyan-300 ml-2"></span>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="burger-btn" class="text-cyan-400 hover:text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-black/95 border-b border-cyan-900/50 flex-col items-center py-6 space-y-6 font-sci-fi z-40 md:hidden backdrop-blur-xl">
+            <a href="#scene-container" class="mobile-link text-gray-400 hover:text-cyan-300 text-lg">СИСТЕМА</a>
+            <a href="#game-view" class="mobile-link text-gray-400 hover:text-cyan-300 text-lg">ГРА</a>
+            <a href="#catalog-view" class="mobile-link text-cyan-400 text-lg">НЕБЕСНІ ТІЛА</a>
+        </div>
+    </nav>
+    <main class="mt-20 w-full flex-grow">
+        <section id="scene-container" class="w-full h-[85vh] bg-black overflow-hidden relative cursor-grab active:cursor-grabbing border-b border-cyan-900/50">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none"></div>
+            <div id="universe" class="absolute top-1/2 left-1/2 w-0 h-0 preserve-3d"></div>
+            <div class="absolute bottom-8 left-1/2 w-full text-center -translate-x-1/2 text-cyan-500/50 font-sci-fi text-[10px] sm:text-xs tracking-[0.15em] pointer-events-none animate-pulse px-4">
+                <span class="hidden md:inline">
+                    [ ТЯГНІТЬ МИШКОЮ ДЛЯ ОБЕРТАННЯ • CTRL + СКРОЛ ДЛЯ МАСШТАБУВАННЯ ]
+                </span>
+                
+                <span class="inline md:hidden">
+                    [ ТЯГНІТЬ ПАЛЬЦЕМ ДЛЯ ОБЕРТАННЯ • ЩИПОК ДЛЯ ЗУМУ ]
+                </span>
+            </div>
+        </section>
+
+        <section id="catalog-view" class="max-w-7xl mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="h-8 w-1 bg-cyan-500 shadow-[0_0_10px_#06b6d4]"></div>
+                    <h3 class="font-sci-fi text-2xl text-white tracking-widest uppercase">Небесні тіла</h3>
+                </div>
+                <div class="relative w-full md:w-64">
+                    <input type="text" id="search-input" placeholder="ПОШУК ОБ'ЄКТА..." class="w-full bg-gray-950/60 border border-cyan-900 text-cyan-300 text-sm font-sci-fi px-4 py-2 pl-10 rounded focus:border-cyan-400 focus:outline-none transition neon-border">
+                    <svg class="w-4 h-4 text-cyan-600 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+            </div>
+            
+            <div id="categories-container" class="flex flex-wrap gap-3 mb-10 border-b border-gray-900 pb-6">
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-cyan-900/30 text-cyan-400 border border-cyan-500 neon-border active" data-filter="all">ВСІ</button>
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-gray-900/50 text-gray-400 border border-gray-800 hover:text-cyan-300 hover:border-cyan-800 transition" data-filter="planets">ПЛАНЕТИ</button>
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-gray-900/50 text-gray-400 border border-gray-800 hover:text-cyan-300 hover:border-cyan-800 transition" data-filter="dwarf-planets">КАРЛИКОВІ ПЛАНЕТИ</button>
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-gray-900/50 text-gray-400 border border-gray-800 hover:text-cyan-300 hover:border-cyan-800 transition" data-filter="satellites">СУПУТНИКИ</button>
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-gray-900/50 text-gray-400 border border-gray-800 hover:text-cyan-300 hover:border-cyan-800 transition" data-filter="asteroids-comets">АСТЕРОЇДИ ТА КОМЕТИ</button>
+                <button class="filter-btn font-sci-fi text-xs tracking-widest px-4 py-2 rounded bg-gray-900/50 text-gray-400 border border-gray-800 hover:text-cyan-300 hover:border-cyan-800 transition" data-filter="stars">ЗІРКИ</button>
+            </div>
+            
+            <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+        </section>
+       <section id="game-view" class="w-full bg-gray-950 border-t border-b border-gray-900 py-16">
+            <div class="max-w-5xl mx-auto px-4 text-center">
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <div class="h-1 w-12 bg-cyan-500"></div>
+                    <h3 class="font-sci-fi text-3xl text-white tracking-[0.3em]">ГРА</h3>
+                    <div class="h-1 w-12 bg-cyan-500"></div>
+                </div>
+                
+             <div id="game-container" class="relative bg-black border-2 border-cyan-900 rounded-lg overflow-hidden h-[400px] flex flex-col items-center justify-center neon-border">
+    
+    <canvas id="stars" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+    <canvas id="gameCanvas" class="absolute inset-0 w-full h-full cursor-crosshair"></canvas>
+
+    <div id="hud" style="display:none;" class="absolute top-5 w-full flex justify-between px-10 text-cyan-400 font-sci-fi z-20 pointer-events-none">
+        <div id="scoreDisplay" class="text-xs sm:text-sm tracking-widest">DISTANCE: 0m</div>
+        <div id="livesDisplay" class="text-lg">❤️❤️❤️</div>
+    </div>
+
+    <div id="startScreen" class="relative z-10 flex flex-col items-center justify-center pointer-events-auto">
+        <h2 class="font-sci-fi text-4xl md:text-5xl text-white tracking-[0.4em] mb-12 animate-pulse" style="text-shadow: 0 0 20px #22d3ee;">
+            КОСМІЧНА <span class="text-cyan-400">МІСІЯ</span>
+        </h2>
+        
+        <button id="startBtn" class="font-sci-fi text-xl text-black bg-cyan-500 px-16 py-5 rounded-full hover:bg-cyan-400 transition shadow-[0_0_30px_rgba(34,211,238,0.5)] active:scale-95 uppercase tracking-[0.3em] font-bold">
+            ГРАТИ
+        </button>
+    </div>
+
+    <div id="gameOverScreen" class="hidden absolute inset-0 z-30 flex flex-col items-center justify-center bg-black/80 backdrop-blur-md">
+        <h2 class="font-sci-fi text-4xl text-red-500 tracking-[0.3em] mb-2" style="text-shadow: 0 0 15px #ef4444;">
+            МІСІЯ ПРОВАЛЕНА
+        </h2>
+        <p id="finalDistance" class="font-sci-fi text-cyan-400 text-xl mb-8 tracking-widest uppercase">
+            ДИСТАНЦІЯ: 0m
+        </p>
+        
+        <button id="restartBtn" class="font-sci-fi text-sm text-black bg-cyan-500 px-12 py-4 rounded-full hover:bg-cyan-400 transition shadow-[0_0_20px_rgba(34,211,238,0.4)] active:scale-95 uppercase tracking-widest font-bold">
+            ПОВТОРИТИ СПРОБУ
+        </button>
+    </div>
+
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-black border-t border-cyan-900/50 text-center font-sci-fi tracking-widest">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-3">
+            <p class="text-cyan-500 text-sm">&copy; 2026 Solar_OS System</p>
+            <p class="text-xs text-gray-500 uppercase">Команда розробників: Опар Юлія, Футрак Софія, Христан Вікторія </p>
+        </div>
+    </footer>
+    <script src="solar-system.js"></script>
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
