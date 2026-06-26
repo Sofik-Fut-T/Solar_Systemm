@@ -1,1 +1,54 @@
-
+[
+  {
+    "id": "halley",
+    "name": "Комета Галлея",
+    "shortDescription": "Крижана мандрівниця, що повертається раз на 75 років.",
+    "fullDescription": "Найвідоміша комета. Складається з льоду та пилу, які при наближенні до Сонця утворюють довгий хвіст.",
+    "stats": { "mass": "2.2e14 кг", "radius": "5.5 км", "temp": "-100°C" },
+    "visuals": { "color": "bg-cyan-200", "glow": "shadow-[0_0_20px_#a5f3fc]", "size": "w-10 h-10" },
+    "simulation": {
+      "distance": 450, "speed": 0.004, "angle": 30, "size": 8, "orbitRingSize": 900,
+      "background": "radial-gradient(circle at 30% 30%, #cffafe, #06b6d4, #164e63)",
+      "boxShadow": "0 0 10px #06b6d4, inset -3px -3px 5px rgba(0,0,0,0.8)"
+    }
+  },
+  {
+    "id": "oumuamua",
+    "name": "Оумуамуа",
+    "shortDescription": "Дивний міжзоряний гість з іншої системи.",
+    "fullDescription": "Перший об'єкт з іншої галактики, помічений у нас. Має незвичну витягнуту форму та дивне прискорення.",
+    "stats": { "mass": "Невідома", "radius": "400 м", "temp": "Невідома" },
+    "visuals": { "color": "bg-amber-800", "glow": "shadow-[0_0_10px_#92400e]", "size": "w-8 h-12" },
+    "simulation": {
+      "distance": 550, "speed": 0.006, "angle": 100, "size": 6, "orbitRingSize": 1100,
+      "background": "radial-gradient(circle at 30% 30%, #fcd34d, #b45309, #451a03)",
+      "boxShadow": "inset -2px -2px 4px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "vesta",
+    "name": "Веста",
+    "shortDescription": "Другий за масою астероїд головного поясу.",
+    "fullDescription": "Скелястий астероїд, який майже став планетою. Має величезний кратер на південному полюсі.",
+    "stats": { "mass": "2.59e20 кг", "radius": "262 км", "temp": "-60°C" },
+    "visuals": { "color": "bg-stone-500", "glow": "shadow-[0_0_10px_#78716c]", "size": "w-10 h-10" },
+    "simulation": {
+      "distance": 310, "speed": 0.0035, "angle": 270, "size": 9, "orbitRingSize": 620,
+      "background": "radial-gradient(circle at 30% 30%, #d6d3d1, #78716c, #292524)",
+      "boxShadow": "inset -3px -3px 6px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "bennu",
+    "name": "Бенну",
+    "shortDescription": "Астероїд-капсула часу з ранньої системи.",
+    "fullDescription": "Вважається потенційно небезпечним для Землі, але містить зразки вуглецю, яким мільярди років.",
+    "stats": { "mass": "7.32e10 кг", "radius": "245 м", "temp": "-33°C" },
+    "visuals": { "color": "bg-neutral-700", "glow": "shadow-[0_0_5px_#404040]", "size": "w-8 h-8" },
+    "simulation": {
+      "distance": 220, "speed": 0.0045, "angle": 180, "size": 7, "orbitRingSize": 440,
+      "background": "radial-gradient(circle at 30% 30%, #a3a3a3, #525252, #171717)",
+      "boxShadow": "inset -2px -2px 5px rgba(0,0,0,0.9)"
+    }
+  }
+]
