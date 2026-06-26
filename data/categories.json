@@ -1,0 +1,27 @@
+[
+  {
+    "id": "planets",
+    "name": "ПЛАНЕТИ",
+    "dataFile": "planets.json"
+  },
+  {
+    "id": "dwarf-planets",
+    "name": "КАРЛИКОВІ ПЛАНЕТИ",
+    "dataFile": "dwarf-planets.json"
+  },
+  {
+    "id": "satellites",
+    "name": "СУПУТНИКИ",
+    "dataFile": "satellites.json"
+  },
+  {
+    "id": "stars",
+    "name": "ЗІРКИ",
+    "dataFile": "stars.json"
+  },
+  {
+    "id": "asteroids-comets",
+    "name": "АСТЕРОЇДИ ТА КОМЕТИ",
+    "dataFile": "asteroids-comets.json"
+  }
+]
