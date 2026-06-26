@@ -1,0 +1,54 @@
+[
+  {
+    "id": "pluto",
+    "name": "Плутон",
+    "shortDescription": "Серце Сонячної системи на краю темряви.",
+    "fullDescription": "Має характерну область у формі серця. Складається переважно з льоду та скельних порід.",
+    "stats": { "mass": "1.30e22 кг", "radius": "1188 км", "temp": "-230°C" },
+    "visuals": { "color": "bg-slate-400", "glow": "shadow-[0_0_15px_#94a3b8]", "size": "w-14 h-14" },
+    "simulation": {
+      "distance": 600, "speed": 0.001, "angle": 80, "size": 14, "orbitRingSize": 1200,
+      "background": "radial-gradient(circle at 30% 30%, #e2e8f0, #94a3b8, #334155)",
+      "boxShadow": "inset -6px -6px 10px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "ceres",
+    "name": "Церера",
+    "shortDescription": "Королева головного поясу астероїдів.",
+    "fullDescription": "Найменша серед карликових планет, але найбільший об'єкт між Марсом та Юпітером.",
+    "stats": { "mass": "9.39e20 кг", "radius": "473 км", "temp": "-105°C" },
+    "visuals": { "color": "bg-gray-500", "glow": "shadow-[0_0_15px_#6b7280]", "size": "w-12 h-12" },
+    "simulation": {
+      "distance": 320, "speed": 0.003, "angle": 200, "size": 10, "orbitRingSize": 640,
+      "background": "radial-gradient(circle at 30% 30%, #9ca3af, #4b5563, #1f2937)",
+      "boxShadow": "inset -4px -4px 8px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "eris",
+    "name": "Еріда",
+    "shortDescription": "Об'єкт, що змінив наше уявлення про планети.",
+    "fullDescription": "Вона масивніша за Плутон. Її відкриття призвело до того, що Плутон позбавили статусу дев'ятої планети.",
+    "stats": { "mass": "1.66e22 кг", "radius": "1163 км", "temp": "-243°C" },
+    "visuals": { "color": "bg-gray-300", "glow": "shadow-[0_0_20px_#d1d5db]", "size": "w-14 h-14" },
+    "simulation": {
+      "distance": 680, "speed": 0.0008, "angle": 310, "size": 16, "orbitRingSize": 1360,
+      "background": "radial-gradient(circle at 30% 30%, #f3f4f6, #9ca3af, #374151)",
+      "boxShadow": "inset -6px -6px 10px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "makemake",
+    "name": "Макемаке",
+    "shortDescription": "Третя за розміром карликова планета.",
+    "fullDescription": "Була відкрита під час Великодніх свят, тому названа на честь творця людства в міфах острова Пасхи.",
+    "stats": { "mass": "3.10e21 кг", "radius": "715 км", "temp": "-239°C" },
+    "visuals": { "color": "bg-rose-900", "glow": "shadow-[0_0_15px_#881337]", "size": "w-12 h-12" },
+    "simulation": {
+      "distance": 640, "speed": 0.0009, "angle": 150, "size": 12, "orbitRingSize": 1280,
+      "background": "radial-gradient(circle at 30% 30%, #fda4af, #be123c, #4c0519)",
+      "boxShadow": "inset -5px -5px 8px rgba(0,0,0,0.9)"
+    }
+  }
+]
