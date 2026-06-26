@@ -1,0 +1,54 @@
+[
+  {
+    "id": "sun",
+    "name": "Сонце",
+    "shortDescription": "Центральна зірка нашої системи.",
+    "fullDescription": "Сонце — зірка класу жовтий карлик, яка містить 99.8% маси всієї Сонячної системи.",
+    "stats": { "mass": "1.98 × 10³⁰ кг", "radius": "696,340 км", "temp": "5,500°C" },
+    "visuals": { "color": "bg-yellow-400", "glow": "shadow-[0_0_80px_#facc15]", "size": "w-40 h-40" },
+    "simulation": {
+      "distance": 0, "speed": 0, "angle": 0, "size": 100, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 50% 50%, #fff, #facc15, #ea580c)",
+      "boxShadow": "0 0 60px #facc15, inset -5px -5px 20px rgba(234, 88, 12, 0.8)"
+    }
+  },
+  {
+    "id": "proxima",
+    "name": "Проксима Центавра",
+    "shortDescription": "Найближча до нас зірка після Сонця.",
+    "fullDescription": "Проксима Центавра — червоний карлик, розташований на відстані 4.24 світлових років від Землі.",
+    "stats": { "mass": "2.44 × 10²⁸ кг", "radius": "107,280 км", "temp": "2,768°C" },
+    "visuals": { "color": "bg-red-700", "glow": "shadow-[0_0_30px_#b91c1c]", "size": "w-24 h-24" },
+    "simulation": {
+      "distance": 900, "speed": 0.0005, "angle": 45, "size": 60, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 50% 50%, #fecaca, #ef4444, #991b1b)",
+      "boxShadow": "0 0 40px #ef4444"
+    }
+  },
+  {
+    "id": "sirius",
+    "name": "Сіріус",
+    "shortDescription": "Найяскравіша зірка на нічному небі Землі.",
+    "fullDescription": "Сіріус — це подвійна зоряна система. Головна зірка світить у 25 разів яскравіше за наше Сонце.",
+    "stats": { "mass": "4.01 × 10³⁰ кг", "radius": "1.19 млн км", "temp": "9,660°C" },
+    "visuals": { "color": "bg-blue-100", "glow": "shadow-[0_0_60px_#dbeafe]", "size": "w-36 h-36" },
+    "simulation": {
+      "distance": 1200, "speed": 0.0003, "angle": 160, "size": 120, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 50% 50%, #ffffff, #93c5fd, #1d4ed8)",
+      "boxShadow": "0 0 80px #93c5fd"
+    }
+  },
+  {
+    "id": "betelgeuse",
+    "name": "Бетельгейзе",
+    "shortDescription": "Червоний надгігант, що готується стати надновою.",
+    "fullDescription": "Бетельгейзе — масивна зоря на завершальній стадії своєї еволюції. Вона величезна.",
+    "stats": { "mass": "2.29 × 10³¹ кг", "radius": "617 млн км", "temp": "3,300°C" },
+    "visuals": { "color": "bg-red-500", "glow": "shadow-[0_0_70px_#ef4444]", "size": "w-48 h-48" },
+    "simulation": {
+      "distance": 1500, "speed": 0.0002, "angle": 280, "size": 200, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 50% 50%, #fca5a5, #b91c1c, #7f1d1d)",
+      "boxShadow": "0 0 100px #b91c1c"
+    }
+  }
+]
