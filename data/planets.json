@@ -1,0 +1,54 @@
+[
+  {
+    "id": "earth",
+    "name": "Земля",
+    "shortDescription": "Наша рідна планета, єдина відома з біосферою.",
+    "fullDescription": "Земля — третя від Сонця планета Сонячної системи, єдина відома планета, на якій існує життя.",
+    "stats": { "mass": "5.97 × 10²⁴ кг", "radius": "6,371 км", "temp": "+15°C" },
+    "visuals": { "color": "bg-blue-500", "glow": "shadow-[0_0_30px_#3b82f6]", "size": "w-24 h-24" },
+    "simulation": {
+      "distance": 200, "speed": 0.005, "angle": 0, "size": 30, "orbitRingSize": 400,
+      "background": "radial-gradient(circle at 30% 30%, #4ade80, #3b82f6 40%, #1e3a8a)",
+      "boxShadow": "inset -10px -10px 15px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "mars",
+    "name": "Марс",
+    "shortDescription": "Червона планета з найбільшим вулканом у системі.",
+    "fullDescription": "Марс — четверта планета від Сонця. Через велику кількість оксиду заліза на поверхні має червонуватий відтінок.",
+    "stats": { "mass": "6.39 × 10²³ кг", "radius": "3,389 км", "temp": "-63°C" },
+    "visuals": { "color": "bg-red-600", "glow": "shadow-[0_0_25px_#dc2626]", "size": "w-20 h-20" },
+    "simulation": {
+      "distance": 260, "speed": 0.004, "angle": 45, "size": 22, "orbitRingSize": 520,
+      "background": "radial-gradient(circle at 30% 30%, #fca5a5, #dc2626, #7f1d1d)",
+      "boxShadow": "inset -10px -10px 15px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "jupiter",
+    "name": "Юпітер",
+    "shortDescription": "Газовий гігант, найбільша планета нашої системи.",
+    "fullDescription": "Юпітер — п'ята і найбільша планета Сонячної системи. Це газовий гігант, відомий своєю Великою червоною плямою.",
+    "stats": { "mass": "1.89 × 10²⁷ кг", "radius": "69,911 км", "temp": "-108°C" },
+    "visuals": { "color": "bg-orange-400", "glow": "shadow-[0_0_40px_#fb923c]", "size": "w-32 h-32" },
+    "simulation": {
+      "distance": 380, "speed": 0.002, "angle": 120, "size": 56, "orbitRingSize": 760,
+      "background": "linear-gradient(to bottom, #d97706, #fef3c7, #b45309, #fde68a, #78350f)",
+      "boxShadow": "inset -10px -10px 20px rgba(0,0,0,0.9)"
+    }
+  },
+  {
+    "id": "saturn",
+    "name": "Сатурн",
+    "shortDescription": "Планета, що славиться своєю величною системою кілець.",
+    "fullDescription": "Сатурн — шоста планета від Сонця. Газовий гігант, що володіє найяскравішою і найскладнішою системою кілець.",
+    "stats": { "mass": "5.68 × 10²⁶ кг", "radius": "58,232 км", "temp": "-139°C" },
+    "visuals": { "color": "bg-yellow-600", "glow": "shadow-[0_0_35px_#ca8a04]", "size": "w-28 h-28" },
+    "simulation": {
+      "distance": 480, "speed": 0.0015, "angle": 210, "size": 48, "orbitRingSize": 960,
+      "background": "linear-gradient(to bottom, #fef08a, #ca8a04, #713f12)",
+      "boxShadow": "inset -10px -10px 15px rgba(0,0,0,0.9)"
+    }
+  }
+]
