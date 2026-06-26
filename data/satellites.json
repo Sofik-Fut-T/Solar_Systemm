@@ -1,0 +1,54 @@
+[
+  {
+    "id": "moon",
+    "name": "Місяць",
+    "shortDescription": "Супутник, що керує припливами на Землі.",
+    "fullDescription": "П'ятий за величиною супутник у системі. Завжди повернутий до Землі однією стороною.",
+    "stats": { "mass": "7.34e22 кг", "radius": "1737 км", "temp": "-173°C" },
+    "visuals": { "color": "bg-slate-300", "glow": "shadow-[0_0_25px_#cbd5e1]", "size": "w-16 h-16" },
+    "simulation": {
+      "orbitsAround": "earth", "distance": 35, "speed": 0.05, "angle": 0, "size": 10, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 30% 30%, #e2e8f0, #94a3b8, #475569)",
+      "boxShadow": "inset -4px -4px 8px rgba(0,0,0,0.8)"
+    }
+  },
+  {
+    "id": "io",
+    "name": "Іо",
+    "shortDescription": "Світ діючих вулканів Юпітера.",
+    "fullDescription": "Найбільш вулканічно активне тіло. На поверхні сотні діючих вулканів, що викидають сірку на сотні км.",
+    "stats": { "mass": "8.93e22 кг", "radius": "1821 км", "temp": "-130°C" },
+    "visuals": { "color": "bg-yellow-300", "glow": "shadow-[0_0_20px_#fde047]", "size": "w-16 h-16" },
+    "simulation": {
+      "orbitsAround": "jupiter", "distance": 45, "speed": 0.08, "angle": 90, "size": 12, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 30% 30%, #fef08a, #ca8a04, #9a3412)",
+      "boxShadow": "inset -4px -4px 8px rgba(0,0,0,0.8)"
+    }
+  },
+  {
+    "id": "titan",
+    "name": "Титан",
+    "shortDescription": "Супутник з морями з рідкого метану.",
+    "fullDescription": "Більший за Меркурій. Це єдиний супутник зі щільною атмосферою, дуже схожий на молоду Землю.",
+    "stats": { "mass": "1.34e23 кг", "radius": "2574 км", "temp": "-179°C" },
+    "visuals": { "color": "bg-orange-300", "glow": "shadow-[0_0_25px_#fdba74]", "size": "w-20 h-20" },
+    "simulation": {
+      "orbitsAround": "saturn", "distance": 55, "speed": 0.03, "angle": 180, "size": 16, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 30% 30%, #fed7aa, #f97316, #c2410c)",
+      "boxShadow": "inset -4px -4px 8px rgba(0,0,0,0.8)"
+    }
+  },
+  {
+    "id": "enceladus",
+    "name": "Енцелад",
+    "shortDescription": "Крижана перлина з підземним океаном.",
+    "fullDescription": "Відбиває майже 100% сонячного світла. Під кригою ховається океан, де можливе життя.",
+    "stats": { "mass": "1.08e20 кг", "radius": "252 км", "temp": "-198°C" },
+    "visuals": { "color": "bg-cyan-100", "glow": "shadow-[0_0_20px_#cffafe]", "size": "w-12 h-12" },
+    "simulation": {
+      "orbitsAround": "saturn", "distance": 40, "speed": 0.07, "angle": 45, "size": 8, "orbitRingSize": 0,
+      "background": "radial-gradient(circle at 30% 30%, #ecfeff, #67e8f9, #0891b2)",
+      "boxShadow": "inset -2px -2px 6px rgba(0,0,0,0.8)"
+    }
+  }
+]
